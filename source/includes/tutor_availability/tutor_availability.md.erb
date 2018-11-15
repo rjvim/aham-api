@@ -1,0 +1,36 @@
+# Tutor Availability
+
+
+## Save Tutor Availability
+
+### HTTP Request
+
+`POST https://ahamlearning.com/ahamapi/availability/tutor_id`
+
+Accept: application/x.aham.v2+json
+
+> Request
+
+```json
+<%= prettify_json(partial("includes/tutor_availability/tutor_availability_save_request.json.erb")) %>
+```
+
+> Error Response
+
+```json
+{"error":true,"message":"Invalid Time slots, make sure slots are not overlapping"}
+```
+
+> Success Response
+
+```json
+{"success":true}
+```
+
+## Get Tutor Availability
+
+
+
+## Block Tutor Dates
+## Removing Block Dates
+## Get Available Tutors

@@ -1,0 +1,39 @@
+# Authentication
+
+
+We have to pass the token for all the api which require authentication.
+
+We have to pass token in `Authorization` Header.
+
+Also we have to pass Accept header to mention the version of the api we are using.
+
+Please note: version of api is mentioned along with each end point.
+
+```
+Authorization: Bearer <token>
+Accept: application/x.aham.v1+json
+```
+
+> To authorize, use this code:
+
+```shell
+# With shell, you can just pass the correct header with each request
+curl "https://ahamlearning.com/ahamapi/learner/authenticate"
+  -H "Accept: application/x.aham.v1+json"
+  -H "Content-Type: application/json"
+  -d '
+    <%= prettify_json(partial("requests/authentication.json.erb")) %>
+  '
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "result": "success",
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjc0MSwiaXNzIjoiaHR0cDovL2FoYW12Mi50ZXN0L2FoYW1hcGkvbGVhcm5lci9hdXRoZW50aWNhdGUiLCJpYXQiOjE1NDIyNjM0ODQsImV4cCI6MTkwMjI2MzQ4NCwibmJmIjoxNTQyMjYzNDg0LCJqdGkiOiJwdkdYczRMeXVzTGdqQ05mIn0.aharGKtleL308SYFVGPkoJlJ_VYx68j4GWnL0fLgIrM"
+}
+```
+
+
+

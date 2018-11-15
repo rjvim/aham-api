@@ -55,4 +55,7 @@ set :port, 4567
 
 helpers do
   require './lib/toc_data.rb'
+  def prettify_json json
+    JSON.pretty_generate(JSON.parse(json))
+  end
 end
